@@ -1,0 +1,34 @@
+.header {
+  background-color: var(--black);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.6);
+  &__logo {
+    width: 50px;
+    height: auto;
+    padding: 16px;
+  }
+  &__title {
+    font-family: "Oswald";
+    color: var(--gold);
+    font-size: 32px;
+    padding: 16px;
+    width: calc(100% - 82px);
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    &__logo {
+      margin: 0 auto;
+    }
+    &__title {
+      display: none;
+    }
+  }
+}

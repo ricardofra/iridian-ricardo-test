@@ -1,0 +1,99 @@
+.register-wrapper {
+  min-height: calc(100vh - 234px);
+  background-image: url("../../images/bg-image.jpeg");
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  .register-form {
+    width: 600px;
+    margin: 0 auto;
+    background: var(--transparent);
+    padding: 32px;
+    border: 2px solid var(--black);
+    border-radius: 8px;
+    h2 {
+      font-family: "Gotham";
+      color: var(--black);
+      text-align: center;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      padding: 10px;
+      margin: 5px;
+      border: 1px solid black;
+      border-radius: 5px;
+      display: block;
+      width: 300px;
+      margin: 10px auto;
+    }
+    .errors {
+      font-family: "Oswald";
+      font-size: 14px;
+      color: var(--red);
+      text-align: center;
+    }
+    &__check {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      input#agree {
+        margin-right: 6px;
+      }
+      label {
+        font-family: "Oswald";
+        font-size: 14px;
+      }
+    }
+    .register-btn {
+      cursor: pointer;
+      height: 32px;
+      line-height: 32px;
+      border: none;
+      background-color: var(--cian);
+      border-radius: 3px;
+      padding: 0 25px;
+      font-family: "Oswald", sans-serif;
+      text-decoration: none;
+      display: block;
+      margin: 24px auto 0;
+      color: white;
+      &:hover {
+        color: white;
+        background-color: var(--black);
+      }
+      &:active {
+        position: relative;
+        top: 1px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .register-wrapper .register-form {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .register-wrapper .register-form {
+    width: calc(100% - 24px);
+    margin: 12px;
+    padding: 24px 12px;
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 250px;
+    }
+    &__check {
+      width: 260px;
+      margin: 0 auto;
+      align-items: flex-start;
+      input#agree {
+        margin-top: 6px;
+      }
+    }
+  }
+}
